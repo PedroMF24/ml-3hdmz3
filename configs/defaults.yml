@@ -1,0 +1,63 @@
+docker_image_name: 3hdmz3-ml:dev # registry.gitlab.com/pedromf24/ml-3hdmz3:test
+experiment_name: dev
+sampler: "cmaes2"
+n_cpus: 30
+n_scans: 30
+save_data_path: /home/figueiredo/ml/ml-3hdmz3/data
+aim_data_path: /home/figueiredo/ml/ml-3hdmz3/aim
+so_generated_path: /home/figueiredo/ml/ml-3hdmz3/micrOmegas-model/so_generated
+collect_all_points: False
+collect_all_good_points: True
+collect_all_logbooks: True
+delete_all_tmp_files: False
+n_generations: 15000
+early_stop_n_valid_points: 12000
+early_stop_n_restarts: 10
+restart: False
+verbose: True
+
+Benchmarks: False
+BH-Point: "G"
+
+HT: True
+Do_Chisq: True
+MO: True
+DD: True
+ID: False
+Ch_Relic: False
+penalty:
+  use_seeds: False
+  parameter:
+    model: "hbos" # "hbos" NULL # Set none to ignore parameter density penalty
+    warmup: 0
+    cooldown: True
+    focus: ["MH10","theta"]
+  observable:
+    model: NULL #  Set none to ignore observable density penalty
+    warmup: 0
+    cooldown: True
+    focus: [] # 
+rs:
+  n_population: 100
+cmaes:
+  sigma: 1.0
+  centroid_seed: NULL
+  no_good_patience_restart: 7500
+  ##############################################
+  # Only being used by CMAES 1
+  ##############################################
+  stagnation_time_lapse_multiplier: 0.2
+  stagnation_offset: 100
+  stagnation_recent: 20
+  stagnation_dim_multiplier: 30
+  ##############################################
+  # New for CMAES 2 better restarts
+  ##############################################
+  best_loss_patience: 200
+  best_n_valid_constraints_counter_patience: 100
+
+constraints_to_ignore:
+  [
+  ]
+parameter_space:
+  tanbeta: False

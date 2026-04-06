@@ -1,0 +1,41 @@
+MH125:
+  fixed: 125.0
+MH10:
+  low: 200.0
+  up: 1000.0
+MH20:
+  low: 50.0
+  up: 1000.0
+mC1:
+  low: 70.0
+  up: 1000.0
+mC2:
+  low: 70.0
+  up: 1000.0
+theta:
+  low: "-np.pi/4"
+  up: "-np.pi/4"
+g1:
+  low: -0.5
+  up: 0.5
+g2:
+  low: -0.5
+  up: 0.5
+L1:
+  exp_low: -3.0
+  exp_up: 1.0
+L2:
+  exp_low: -3.0
+  exp_up: 1.0
+L4:
+  exp_low: -3.0
+  exp_up: 1.0
+L7:
+  exp_low: -3.0
+  exp_up: 1.0
+L10:
+  exp_low: -3.0
+  exp_up: 1.0
+L11:
+  exp_low: -3.0
+  exp_up: 1.0

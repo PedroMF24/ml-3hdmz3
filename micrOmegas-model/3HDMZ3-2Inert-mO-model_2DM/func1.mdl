@@ -1,0 +1,597 @@
+Z33HDM
+ Constraints
+ Name     |> Expression                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <|
+CW       |sqrt(1-pow(SW,2))               % CW
+GF       |EE^2/(2*SW*MW)^2/Sqrt2 %  experimental value 1.166E-5 [1/GeV^2]
+MZ       |MW/CW % Z boson mass
+LamQCD   |initQCD5(alphaSMZ, McMc, MbMb, Mtp)
+Mb       |MbEff(Q)
+Mc       |McEff(Q)
+Ms       |MqEff(0.096, Q) % s-quark effective mass  via 2MeV running one
+vv       |2*MW/EE*SW                      % vv
+L3       |pow(mh/vv,2)/2.                                                                           % L3
+L8       |( - 2*pow(mH1P,2) + pow(mH1,2) + pow(mH2,2) + (pow(mH1,2) - pow(mH2,2))*cos(2*theta))/pow(vv,2)   % L8
+L5       |(2*pow(mH1P,2) - 2*pow(mH1,2))/pow(vv,2) - g1 + g2*sin(theta)/cos(theta)                   % L5 
+L12      |(pow(mH1,2)-pow(mH2,2)*sin(2*theta))/pow(vv,2)                                 % L12
+L9       |(- 2*pow(mH2P,2) + pow(mH1,2) + pow(mH2,2) + (-pow(mH1,2) + pow(mH2,2))*cos(2*theta))/pow(vv,2)   % L9
+L6       |(2*pow(mH2P,2) - 2*pow(mH1,2))/pow(vv,2) - g1 - g2*cos(theta)/sin(theta)                    % L6
+LGGH     |-cabs(lGGhiggs(mh,"h"))
+LAAH     |-cabs(lAAhiggs(mh,"h"))
+aQCD_h   |alphaQCD(mh)/PI
+Rqcd_h   |sqrt(1+aQCD_h*(149/12+aQCD_h*(68.6482-aQCD_h*212.447)))
+xiW            |1.
+xiZ            |1.
+xiA            |1.
+xiG            |1.
+CKM1x1         |1.                                                                                                              % CKM1x1                                            
+CKM1x2         |0.                                                                                                              % CKM1x2                                            
+CKM1x3         |0.                                                                                                              % CKM1x3                                            
+CKM2x1         |0.                                                                                                              % CKM2x1                                            
+CKM2x2         |1.                                                                                                              % CKM2x2                                            
+CKM2x3         |0.                                                                                                              % CKM2x3                                            
+CKM3x1         |0.                                                                                                              % CKM3x1                                            
+CKM3x2         |0.                                                                                                              % CKM3x2                                            
+CKM3x3         |1.                                                                                                              % CKM3x3                                            
+I1a11          |CKM1x1*md                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I1a12          |CKM2x1*md                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I1a13          |CKM3x1*md                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I1a21          |CKM1x2*Ms                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I1a22          |CKM2x2*Ms                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I1a23          |CKM3x2*Ms                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I1a31          |CKM1x3*Mb                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I1a32          |CKM2x3*Mb                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I1a33          |CKM3x3*Mb                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I2a11          |CKM1x1*mu                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I2a12          |CKM2x1*Mc                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I2a13          |CKM3x1*Mtp                                                                                                      % Abbreviation used in optimizatized FeynRules outpu
+I2a21          |CKM1x2*mu                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I2a22          |CKM2x2*Mc                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I2a23          |CKM3x2*Mtp                                                                                                      % Abbreviation used in optimizatized FeynRules outpu
+I2a31          |CKM1x3*mu                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I2a32          |CKM2x3*Mc                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I2a33          |CKM3x3*Mtp                                                                                                      % Abbreviation used in optimizatized FeynRules outpu
+I3a11          |CKM1x1*mu                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I3a12          |CKM1x2*mu                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I3a13          |CKM1x3*mu                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I3a21          |CKM2x1*Mc                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I3a22          |CKM2x2*Mc                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I3a23          |CKM2x3*Mc                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I3a31          |CKM3x1*Mtp                                                                                                      % Abbreviation used in optimizatized FeynRules outpu
+I3a32          |CKM3x2*Mtp                                                                                                      % Abbreviation used in optimizatized FeynRules outpu
+I3a33          |CKM3x3*Mtp                                                                                                      % Abbreviation used in optimizatized FeynRules outpu
+I4a11          |CKM1x1*md                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I4a12          |CKM1x2*Ms                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I4a13          |CKM1x3*Mb                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I4a21          |CKM2x1*md                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I4a22          |CKM2x2*Ms                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I4a23          |CKM2x3*Mb                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I4a31          |CKM3x1*md                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I4a32          |CKM3x2*Ms                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+I4a33          |CKM3x3*Mb                                                                                                       % Abbreviation used in optimizatized FeynRules outpu
+x1x0           |-4*L1                                                                                                           % H1P  H1P  H1P~ H1P~  coupling.
+x2x0           |-2*L10                                                                                                          % WP.f H1P~ H1P~ H2P   coupling.
+x3x0           |-2*L10                                                                                                          % WPbarH1P  H1P  H2P~  coupling.
+x4x0           |-2*L11                                                                                                          % WPbarH1P~ H2P  H2P   coupling.
+x5x0           |-2*L11                                                                                                          % WP.f H1P  H2P~ H2P~  coupling.
+x6x0           |-2*L12                                                                                                          % WPbarWPbarH1P  H2P   coupling.
+x7x0           |-2*L12                                                                                                          % WP.f WP.f H1P~ H2P~  coupling.
+x8x0           |-4*L2                                                                                                           % H2P  H2P  H2P~ H2P~  coupling.
+x9x0           |-6*L3                                                                                                           % Z.f  Z.f  Z.f  Z.f   coupling.
+x10x0          |-2*L3                                                                                                           % Z.f  Z.f  WP.f WPbar coupling.
+x11x0          |-4*L3                                                                                                           % WP.f WP.f WPbarWPbar coupling.
+x12x0          |-2*L3                                                                                                           % Z.f  Z.f  h    h     coupling.
+x13x0          |-2*L3                                                                                                           % WP.f WPbarh    h     coupling.
+x14x0          |-6*L3                                                                                                           % h    h    h    h     coupling.
+x15x0          |-L4-L7                                                                                                          % H1P  H1P~ H2P  H2P~  coupling.
+x16x0          |-L5                                                                                                             % Z.f  Z.f  H1P  H1P~  coupling.
+x17x0          |-L5-L8                                                                                                          % WP.f WPbarH1P  H1P~  coupling.
+x18x0          |-L5                                                                                                             % h    h    H1P  H1P~  coupling.
+x19x0          |-L6                                                                                                             % Z.f  Z.f  H2P  H2P~  coupling.
+x20x0          |-L6-L9                                                                                                          % WP.f WPbarH2P  H2P~  coupling.
+x21x0          |-L6                                                                                                             % h    h    H2P  H2P~  coupling.
+x22x0          |-2*L3*vv                                                                                                        % Z.f  Z.f  h     coupling.
+x23x0          |-2*L3*vv                                                                                                        % WP.f WPbarh     coupling.
+x24x0          |-6*L3*vv                                                                                                        % h    h    h     coupling.
+x25x0          |-(L5*vv)                                                                                                        % h    H1P  H1P~  coupling.
+x26x0          |-(L6*vv)                                                                                                        % h    H2P  H2P~  coupling.
+x27x0          |-(MW*xiW)                                                                                                       % WPbarA.c  WP.f  coupling.
+x28x0          |-(MW*xiW)                                                                                                       % WP.C A.c  WPbar coupling.
+x29x0          |(MW*xiW*pow(SW,-1))/2.                                                                                          % WP.C WPbarZ.f   coupling.
+x30x0          |-0.5*(MW*xiW*pow(SW,-1))                                                                                        % WPbarWP.c Z.f   coupling.
+x31x0          |(MW*SW*xiW*pow(CW,-1))/2.-(CW*MW*xiW*pow(SW,-1))/2.                                                             % WPbarZ.c  WP.f  coupling.
+x32x0          |(MW*SW*xiW*pow(CW,-1))/2.-(CW*MW*xiW*pow(SW,-1))/2.                                                             % WP.C Z.c  WPbar coupling.
+x33x0          |-0.5*(MW*xiW*pow(SW,-1))                                                                                        % WP.C WPbarh     coupling.
+x34x0          |-0.5*(MW*xiW*pow(SW,-1))                                                                                        % WPbarWP.c h     coupling.
+x35x0          |(MZ*xiZ*pow(SW,-1))/2.                                                                                          % Z.C  WPbarWP.f  coupling.
+x36x0          |(MZ*xiZ*pow(SW,-1))/2.                                                                                          % Z.C  WP.c WPbar coupling.
+x37x0          |-0.5*(MZ*xiZ*pow(CW,-1)*pow(SW,-1))                                                                             % Z.C  Z.c  h     coupling.
+x38x0          |2                                                                                                               % A    A    WP.f WPbar coupling.
+x39x0          |2                                                                                                               % A    A    H1P  H1P~  coupling.
+x40x0          |2                                                                                                               % A    A    H2P  H2P~  coupling.
+x41x0          |(-(L10*cos(theta))+L11*sin(theta))/2.                                                                           % A1   Z.f  H1P~ H2P   coupling.
+x42x0          |(L10*cos(theta)+L11*sin(theta))/2.                                                                              % A1   h    H1P~ H2P   coupling.
+x43x0          |(-(L10*cos(theta))+L11*sin(theta))/2.                                                                           % Z.f  H1   H1P~ H2P   coupling.
+x44x0          |(-(L10*cos(theta))-L11*sin(theta))/2.                                                                           % h    H1   H1P~ H2P   coupling.
+x45x0          |(-(L10*cos(theta))+L11*sin(theta))/2.                                                                           % A1   Z.f  H1P  H2P~  coupling.
+x46x0          |(-(L10*cos(theta))-L11*sin(theta))/2.                                                                           % A1   h    H1P  H2P~  coupling.
+x47x0          |(L10*cos(theta)-L11*sin(theta))/2.                                                                              % Z.f  H1   H1P  H2P~  coupling.
+x48x0          |(-(L10*cos(theta))-L11*sin(theta))/2.                                                                           % h    H1   H1P  H2P~  coupling.
+x49x0          |(-(L11*cos(theta))-L10*sin(theta))/2.                                                                           % A2   Z.f  H1P~ H2P   coupling.
+x50x0          |(-(L11*cos(theta))+L10*sin(theta))/2.                                                                           % A2   h    H1P~ H2P   coupling.
+x51x0          |(L11*cos(theta)+L10*sin(theta))/2.                                                                              % Z.f  H1P~ H2   H2P   coupling.
+x52x0          |(-(L11*cos(theta))+L10*sin(theta))/2.                                                                           % h    H1P~ H2   H2P   coupling.
+x53x0          |(-(L11*cos(theta))-L10*sin(theta))/2.                                                                           % A2   Z.f  H1P  H2P~  coupling.
+x54x0          |(L11*cos(theta)-L10*sin(theta))/2.                                                                              % A2   h    H1P  H2P~  coupling.
+x55x0          |(-(L11*cos(theta))-L10*sin(theta))/2.                                                                           % Z.f  H1P  H2   H2P~  coupling.
+x56x0          |(-(L11*cos(theta))+L10*sin(theta))/2.                                                                           % h    H1P  H2   H2P~  coupling.
+x57x0          |(-(L12*cos(theta))-L8*sin(theta))/2.                                                                            % A2   Z.f  WPbarH1P   coupling.
+x58x0          |(-(L12*cos(theta))+L8*sin(theta))/2.                                                                            % A2   WPbarh    H1P   coupling.
+x59x0          |(-(L12*cos(theta))-L8*sin(theta))/2.                                                                            % A2   Z.f  WP.f H1P~  coupling.
+x60x0          |(L12*cos(theta)-L8*sin(theta))/2.                                                                               % A2   WP.f h    H1P~  coupling.
+x61x0          |(L12*cos(theta)+L8*sin(theta))/2.                                                                               % Z.f  WPbarH1P  H2    coupling.
+x62x0          |(-(L12*cos(theta))+L8*sin(theta))/2.                                                                            % WPbarh    H1P  H2    coupling.
+x63x0          |(-(L12*cos(theta))-L8*sin(theta))/2.                                                                            % Z.f  WP.f H1P~ H2    coupling.
+x64x0          |(-(L12*cos(theta))+L8*sin(theta))/2.                                                                            % WP.f h    H1P~ H2    coupling.
+x65x0          |(-(L12*cos(theta))+L9*sin(theta))/2.                                                                            % A1   Z.f  WPbarH2P   coupling.
+x66x0          |(-(L12*cos(theta))-L9*sin(theta))/2.                                                                            % A1   WPbarh    H2P   coupling.
+x67x0          |(L12*cos(theta)-L9*sin(theta))/2.                                                                               % Z.f  WPbarH1   H2P   coupling.
+x68x0          |(-(L12*cos(theta))-L9*sin(theta))/2.                                                                            % WPbarh    H1   H2P   coupling.
+x69x0          |(-(L12*cos(theta))+L9*sin(theta))/2.                                                                            % A1   Z.f  WP.f H2P~  coupling.
+x70x0          |(L12*cos(theta)+L9*sin(theta))/2.                                                                               % A1   WP.f h    H2P~  coupling.
+x71x0          |(-(L12*cos(theta))+L9*sin(theta))/2.                                                                            % Z.f  WP.f H1   H2P~  coupling.
+x72x0          |(-(L12*cos(theta))-L9*sin(theta))/2.                                                                            % WP.f h    H1   H2P~  coupling.
+x73x0          |(-(L8*cos(theta))+L12*sin(theta))/2.                                                                            % A1   Z.f  WPbarH1P   coupling.
+x74x0          |(L8*cos(theta)+L12*sin(theta))/2.                                                                               % A1   WPbarh    H1P   coupling.
+x75x0          |(-(L8*cos(theta))+L12*sin(theta))/2.                                                                            % Z.f  WPbarH1   H1P   coupling.
+x76x0          |(-(L8*cos(theta))-L12*sin(theta))/2.                                                                            % WPbarh    H1   H1P   coupling.
+x77x0          |(-(L8*cos(theta))+L12*sin(theta))/2.                                                                            % A1   Z.f  WP.f H1P~  coupling.
+x78x0          |(-(L8*cos(theta))-L12*sin(theta))/2.                                                                            % A1   WP.f h    H1P~  coupling.
+x79x0          |(L8*cos(theta)-L12*sin(theta))/2.                                                                               % Z.f  WP.f H1   H1P~  coupling.
+x80x0          |(-(L8*cos(theta))-L12*sin(theta))/2.                                                                            % WP.f h    H1   H1P~  coupling.
+x81x0          |(-(L9*cos(theta))-L12*sin(theta))/2.                                                                            % A2   Z.f  WPbarH2P   coupling.
+x82x0          |(L9*cos(theta)-L12*sin(theta))/2.                                                                               % A2   WPbarh    H2P   coupling.
+x83x0          |(-(L9*cos(theta))-L12*sin(theta))/2.                                                                            % Z.f  WPbarH2   H2P   coupling.
+x84x0          |(-(L9*cos(theta))+L12*sin(theta))/2.                                                                            % WPbarh    H2   H2P   coupling.
+x85x0          |(-(L9*cos(theta))-L12*sin(theta))/2.                                                                            % A2   Z.f  WP.f H2P~  coupling.
+x86x0          |(-(L9*cos(theta))+L12*sin(theta))/2.                                                                            % A2   WP.f h    H2P~  coupling.
+x87x0          |(L9*cos(theta)+L12*sin(theta))/2.                                                                               % Z.f  WP.f H2   H2P~  coupling.
+x88x0          |(-(L9*cos(theta))+L12*sin(theta))/2.                                                                            % WP.f h    H2   H2P~  coupling.
+x89x0          |(vv*(L10*cos(theta)+L11*sin(theta)))/2.                                                                         % A1   H1P~ H2P   coupling.
+x90x0          |-0.5*(vv*(L10*cos(theta)+L11*sin(theta)))                                                                       % H1   H1P~ H2P   coupling.
+x91x0          |-0.5*(vv*(L10*cos(theta)+L11*sin(theta)))                                                                       % A1   H1P  H2P~  coupling.
+x92x0          |-0.5*(vv*(L10*cos(theta)+L11*sin(theta)))                                                                       % H1   H1P  H2P~  coupling.
+x93x0          |(-(L11*vv*cos(theta))+L10*vv*sin(theta))/2.                                                                     % A2   H1P~ H2P   coupling.
+x94x0          |(-(L11*vv*cos(theta))+L10*vv*sin(theta))/2.                                                                     % H1P~ H2   H2P   coupling.
+x95x0          |(vv*(L11*cos(theta)-L10*sin(theta)))/2.                                                                         % A2   H1P  H2P~  coupling.
+x96x0          |(-(L11*vv*cos(theta))+L10*vv*sin(theta))/2.                                                                     % H1P  H2   H2P~  coupling.
+x97x0          |(-(L12*vv*cos(theta))+L8*vv*sin(theta))/2.                                                                      % A2   WPbarH1P   coupling.
+x98x0          |(vv*(L12*cos(theta)-L8*sin(theta)))/2.                                                                          % A2   WP.f H1P~  coupling.
+x99x0          |(-(L12*vv*cos(theta))+L8*vv*sin(theta))/2.                                                                      % WPbarH1P  H2    coupling.
+x100x0         |(-(L12*vv*cos(theta))+L8*vv*sin(theta))/2.                                                                      % WP.f H1P~ H2    coupling.
+x101x0         |-0.5*(vv*(L12*cos(theta)+L9*sin(theta)))                                                                        % A1   WPbarH2P   coupling.
+x102x0         |-0.5*(vv*(L12*cos(theta)+L9*sin(theta)))                                                                        % WPbarH1   H2P   coupling.
+x103x0         |(vv*(L12*cos(theta)+L9*sin(theta)))/2.                                                                          % A1   WP.f H2P~  coupling.
+x104x0         |-0.5*(vv*(L12*cos(theta)+L9*sin(theta)))                                                                        % WP.f H1   H2P~  coupling.
+x105x0         |(vv*(L8*cos(theta)+L12*sin(theta)))/2.                                                                          % A1   WPbarH1P   coupling.
+x106x0         |-0.5*(vv*(L8*cos(theta)+L12*sin(theta)))                                                                        % WPbarH1   H1P   coupling.
+x107x0         |-0.5*(vv*(L8*cos(theta)+L12*sin(theta)))                                                                        % A1   WP.f H1P~  coupling.
+x108x0         |-0.5*(vv*(L8*cos(theta)+L12*sin(theta)))                                                                        % WP.f H1   H1P~  coupling.
+x109x0         |(vv*(L9*cos(theta)-L12*sin(theta)))/2.                                                                          % A2   WPbarH2P   coupling.
+x110x0         |(-(L9*vv*cos(theta))+L12*vv*sin(theta))/2.                                                                      % WPbarH2   H2P   coupling.
+x111x0         |(-(L9*vv*cos(theta))+L12*vv*sin(theta))/2.                                                                      % A2   WP.f H2P~  coupling.
+x112x0         |(-(L9*vv*cos(theta))+L12*vv*sin(theta))/2.                                                                      % WP.f H2   H2P~  coupling.
+x113x0         |-2*L1*pow(cos(theta),2)-L4*pow(sin(theta),2)                                                                    % A1   A1   H1P  H1P~  coupling.
+x114x0         |-2*L1*pow(cos(theta),2)-L4*pow(sin(theta),2)                                                                    % H1   H1   H1P  H1P~  coupling.
+x115x0         |-0.5*(L10*cos(2*theta))                                                                                         % A1   A2   WPbarH1P   coupling.
+x116x0         |(L10*cos(2*theta))/2.                                                                                           % A2   WPbarH1   H1P   coupling.
+x117x0         |-0.5*(L10*cos(2*theta))                                                                                         % A1   A2   WP.f H1P~  coupling.
+x118x0         |-0.5*(L10*cos(2*theta))                                                                                         % A2   WP.f H1   H1P~  coupling.
+x119x0         |-0.5*(L10*cos(2*theta))                                                                                         % A1   WPbarH1P  H2    coupling.
+x120x0         |-0.5*(L10*cos(2*theta))                                                                                         % WPbarH1   H1P  H2    coupling.
+x121x0         |(L10*cos(2*theta))/2.                                                                                           % A1   WP.f H1P~ H2    coupling.
+x122x0         |-0.5*(L10*cos(2*theta))                                                                                         % WP.f H1   H1P~ H2    coupling.
+x123x0         |-0.5*(L11*cos(2*theta))                                                                                         % A1   A2   WPbarH2P   coupling.
+x124x0         |-0.5*(L11*cos(2*theta))                                                                                         % A2   WPbarH1   H2P   coupling.
+x125x0         |(L11*cos(2*theta))/2.                                                                                           % A1   WPbarH2   H2P   coupling.
+x126x0         |-0.5*(L11*cos(2*theta))                                                                                         % WPbarH1   H2   H2P   coupling.
+x127x0         |-0.5*(L11*cos(2*theta))                                                                                         % A1   A2   WP.f H2P~  coupling.
+x128x0         |(L11*cos(2*theta))/2.                                                                                           % A2   WP.f H1   H2P~  coupling.
+x129x0         |-0.5*(L11*cos(2*theta))                                                                                         % A1   WP.f H2   H2P~  coupling.
+x130x0         |-0.5*(L11*cos(2*theta))                                                                                         % WP.f H1   H2   H2P~  coupling.
+x131x0         |-(L12*cos(2*theta))+(-L5+L6-L8+L9)*cos(theta)*sin(theta)                                                        % A1   A2   Z.f  Z.f   coupling.
+x132x0         |L12*cos(2*theta)+(-L5+L6-L8+L9)*cos(theta)*sin(theta)                                                           % A1   A2   h    h     coupling.
+x133x0         |-L12                                                                                                            % A2   Z.f  h    H1    coupling.
+x134x0         |-L12                                                                                                            % A1   Z.f  h    H2    coupling.
+x135x0         |L12*cos(2*theta)+(L5-L6+L8-L9)*cos(theta)*sin(theta)                                                            % Z.f  Z.f  H1   H2    coupling.
+x136x0         |-(L12*cos(2*theta))+(L5-L6+L8-L9)*cos(theta)*sin(theta)                                                         % h    h    H1   H2    coupling.
+x137x0         |-2*L2*pow(cos(theta),2)-L4*pow(sin(theta),2)                                                                    % A2   A2   H2P  H2P~  coupling.
+x138x0         |-2*L2*pow(cos(theta),2)-L4*pow(sin(theta),2)                                                                    % H2   H2   H2P  H2P~  coupling.
+x139x0         |-(L4*pow(cos(theta),2))-2*L1*pow(sin(theta),2)                                                                  % A2   A2   H1P  H1P~  coupling.
+x140x0         |-(L4*pow(cos(theta),2))-2*L1*pow(sin(theta),2)                                                                  % H1P  H1P~ H2   H2    coupling.
+x141x0         |-(L4*pow(cos(theta),2))-2*L2*pow(sin(theta),2)                                                                  % A1   A1   H2P  H2P~  coupling.
+x142x0         |-(L4*pow(cos(theta),2))-2*L2*pow(sin(theta),2)                                                                  % H1   H1   H2P  H2P~  coupling.
+x143x0         |-((L5+L8)*pow(cos(theta),2))-(L6+L9)*pow(sin(theta),2)+L12*sin(2*theta)                                         % A1   A1   Z.f  Z.f   coupling.
+x144x0         |-(L5*pow(cos(theta),2))-L6*pow(sin(theta),2)                                                                    % A1   A1   WP.f WPbar coupling.
+x145x0         |-((L5+L8)*pow(cos(theta),2))-sin(theta)*(2*L12*cos(theta)+(L6+L9)*sin(theta))                                   % A1   A1   h    h     coupling.
+x146x0         |-((L5+L8)*pow(cos(theta),2))-(L6+L9)*pow(sin(theta),2)+L12*sin(2*theta)                                         % Z.f  Z.f  H1   H1    coupling.
+x147x0         |-(L5*pow(cos(theta),2))-L6*pow(sin(theta),2)                                                                    % WP.f WPbarH1   H1    coupling.
+x148x0         |-((L5+L8)*pow(cos(theta),2))-sin(theta)*(2*L12*cos(theta)+(L6+L9)*sin(theta))                                   % h    h    H1   H1    coupling.
+x149x0         |-((L6+L9)*pow(cos(theta),2))-sin(theta)*(2*L12*cos(theta)+(L5+L8)*sin(theta))                                   % A2   A2   Z.f  Z.f   coupling.
+x150x0         |-(L6*pow(cos(theta),2))-L5*pow(sin(theta),2)                                                                    % A2   A2   WP.f WPbar coupling.
+x151x0         |-((L6+L9)*pow(cos(theta),2))-(L5+L8)*pow(sin(theta),2)+L12*sin(2*theta)                                         % A2   A2   h    h     coupling.
+x152x0         |-((L6+L9)*pow(cos(theta),2))-sin(theta)*(2*L12*cos(theta)+(L5+L8)*sin(theta))                                   % Z.f  Z.f  H2   H2    coupling.
+x153x0         |-(L6*pow(cos(theta),2))-L5*pow(sin(theta),2)                                                                    % WP.f WPbarH2   H2    coupling.
+x154x0         |-((L6+L9)*pow(cos(theta),2))-(L5+L8)*pow(sin(theta),2)+L12*sin(2*theta)                                         % h    h    H2   H2    coupling.
+x155x0         |-0.5*(L7*cos(2*theta))                                                                                          % A1   A2   H1P~ H2P   coupling.
+x156x0         |(L7*cos(2*theta))/2.                                                                                            % A2   H1   H1P~ H2P   coupling.
+x157x0         |-0.5*(L7*cos(2*theta))                                                                                          % A1   H1P~ H2   H2P   coupling.
+x158x0         |-0.5*(L7*cos(2*theta))                                                                                          % H1   H1P~ H2   H2P   coupling.
+x159x0         |-0.5*(L7*cos(2*theta))                                                                                          % A1   A2   H1P  H2P~  coupling.
+x160x0         |-0.5*(L7*cos(2*theta))                                                                                          % A2   H1   H1P  H2P~  coupling.
+x161x0         |(L7*cos(2*theta))/2.                                                                                            % A1   H1P  H2   H2P~  coupling.
+x162x0         |-0.5*(L7*cos(2*theta))                                                                                          % H1   H1P  H2   H2P~  coupling.
+x163x0         |L12*vv*cos(2*theta)+(-L5+L6-L8+L9)*vv*cos(theta)*sin(theta)                                                     % A1   A2   h     coupling.
+x164x0         |-(L12*vv)                                                                                                       % A2   Z.f  H1    coupling.
+x165x0         |-(L12*vv)                                                                                                       % A1   Z.f  H2    coupling.
+x166x0         |-(L12*vv*cos(2*theta))+(L5-L6+L8-L9)*vv*cos(theta)*sin(theta)                                                   % h    H1   H2    coupling.
+x167x0         |-(vv*((L5+L8)*pow(cos(theta),2)+(L6+L9)*pow(sin(theta),2)+L12*sin(2*theta)))                                    % A1   A1   h     coupling.
+x168x0         |-(vv*((L5+L8)*pow(cos(theta),2)+(L6+L9)*pow(sin(theta),2)+L12*sin(2*theta)))                                    % h    H1   H1    coupling.
+x169x0         |-(vv*((L6+L9)*pow(cos(theta),2)+(L5+L8)*pow(sin(theta),2)-2*L12*cos(theta)*sin(theta)))                         % A2   A2   h     coupling.
+x170x0         |-(vv*((L6+L9)*pow(cos(theta),2)+(L5+L8)*pow(sin(theta),2)-2*L12*cos(theta)*sin(theta)))                         % h    H2   H2    coupling.
+x171x0         |(-(L10*cos(theta))-3*L10*cos(3*theta)-L11*sin(theta)+3*L11*sin(3*theta))/4.                                     % A1   A1   A2   Z.f   coupling.
+x172x0         |(-(L10*cos(theta))-3*L10*cos(3*theta)+L11*(sin(theta)-3*sin(3*theta)))/4.                                       % A1   A2   h    H1    coupling.
+x173x0         |(L10*cos(theta)+3*L10*cos(3*theta)+L11*(sin(theta)-3*sin(3*theta)))/4.                                          % A2   Z.f  H1   H1    coupling.
+x174x0         |(L10*cos(theta)+3*L10*cos(3*theta)-L11*sin(theta)+3*L11*sin(3*theta))/4.                                        % A1   A1   h    H2    coupling.
+x175x0         |(-(L10*cos(theta))-3*L10*cos(3*theta)-L11*sin(theta)+3*L11*sin(3*theta))/4.                                     % A1   Z.f  H1   H2    coupling.
+x176x0         |(-(L10*cos(theta))-3*L10*cos(3*theta)+L11*(sin(theta)-3*sin(3*theta)))/4.                                       % h    H1   H1   H2    coupling.
+x177x0         |(-(L11*cos(theta))-3*L11*cos(3*theta)+L10*(sin(theta)-3*sin(3*theta)))/4.                                       % A1   A2   A2   Z.f   coupling.
+x178x0         |(L11*cos(theta)+3*L11*cos(3*theta)+L10*(sin(theta)-3*sin(3*theta)))/4.                                          % A2   A2   h    H1    coupling.
+x179x0         |(-(L11*cos(theta))-3*L11*cos(3*theta)-L10*sin(theta)+3*L10*sin(3*theta))/4.                                     % A1   A2   h    H2    coupling.
+x180x0         |(-(L11*cos(theta))-3*L11*cos(3*theta)+L10*(sin(theta)-3*sin(3*theta)))/4.                                       % A2   Z.f  H1   H2    coupling.
+x181x0         |(L11*cos(theta)+3*L11*cos(3*theta)-L10*sin(theta)+3*L10*sin(3*theta))/4.                                        % A1   Z.f  H2   H2    coupling.
+x182x0         |(-(L11*cos(theta))-3*L11*cos(3*theta)-L10*sin(theta)+3*L10*sin(3*theta))/4.                                     % h    H1   H2   H2    coupling.
+x183x0         |-0.25*(vv*(L10*cos(theta)+3*L10*cos(3*theta)-L11*sin(theta)+3*L11*sin(3*theta)))                                % A1   A2   H1    coupling.
+x184x0         |(vv*(L10*cos(theta)+3*L10*cos(3*theta)-L11*sin(theta)+3*L11*sin(3*theta)))/4.                                   % A1   A1   H2    coupling.
+x185x0         |-0.25*(vv*(L10*cos(theta)+3*L10*cos(3*theta)-L11*sin(theta)+3*L11*sin(3*theta)))                                % H1   H1   H2    coupling.
+x186x0         |(vv*(L11*cos(theta)+3*L11*cos(3*theta)+L10*(sin(theta)-3*sin(3*theta))))/4.                                     % A2   A2   H1    coupling.
+x187x0         |-0.25*(vv*(L11*cos(theta)+3*L11*cos(3*theta)+L10*(sin(theta)-3*sin(3*theta))))                                  % A1   A2   H2    coupling.
+x188x0         |-0.25*(vv*(L11*cos(theta)+3*L11*cos(3*theta)+L10*(sin(theta)-3*sin(3*theta))))                                  % H1   H2   H2    coupling.
+x189x0         |-6*(L1*pow(cos(theta),4)+(L4+L7)*pow(cos(theta),2)*pow(sin(theta),2)+L2*pow(sin(theta),4))                      % A1   A1   A1   A1    coupling.
+x190x0         |-2*(L1*pow(cos(theta),4)+(L4+L7)*pow(cos(theta),2)*pow(sin(theta),2)+L2*pow(sin(theta),4))                      % A1   A1   H1   H1    coupling.
+x191x0         |-6*(L1*pow(cos(theta),4)+(L4+L7)*pow(cos(theta),2)*pow(sin(theta),2)+L2*pow(sin(theta),4))                      % H1   H1   H1   H1    coupling.
+x192x0         |-6*(L2*pow(cos(theta),4)+(L4+L7)*pow(cos(theta),2)*pow(sin(theta),2)+L1*pow(sin(theta),4))                      % A2   A2   A2   A2    coupling.
+x193x0         |-2*(L2*pow(cos(theta),4)+(L4+L7)*pow(cos(theta),2)*pow(sin(theta),2)+L1*pow(sin(theta),4))                      % A2   A2   H2   H2    coupling.
+x194x0         |-6*(L2*pow(cos(theta),4)+(L4+L7)*pow(cos(theta),2)*pow(sin(theta),2)+L1*pow(sin(theta),4))                      % H2   H2   H2   H2    coupling.
+x195x0         |(-3*L1-3*L2-L4-L7+3*(L1+L2-L4-L7)*cos(4*theta))/4.                                                              % A1   A1   A2   A2    coupling.
+x196x0         |(-L1-L2-3*L4-3*L7+(L1+L2-L4-L7)*cos(4*theta))/4.                                                                % A2   A2   H1   H1    coupling.
+x197x0         |(-L1-L2-3*L4-3*L7+(L1+L2-L4-L7)*cos(4*theta))/4.                                                                % A1   A1   H2   H2    coupling.
+x198x0         |(-3*L1-3*L2-L4-L7+3*(L1+L2-L4-L7)*cos(4*theta))/4.                                                              % H1   H1   H2   H2    coupling.
+x199x0         |1                                                                                                               % A    WP.f WPbar coupling.
+x200x0         |1                                                                                                               % A    H1P  H1P~  coupling.
+x201x0         |1                                                                                                               % A    H2P  H2P~  coupling.
+x202x0         |-1                                                                                                              % A.C  WPbarWP    coupling.
+x203x0         |1                                                                                                               % A.C  WP.c WPbar coupling.
+x204x0         |-1                                                                                                              % WP.C A.c  WPbar coupling.
+x205x0         |1                                                                                                               % WP.C WPbarA     coupling.
+x206x0         |CW*pow(SW,-1)                                                                                                   % WP.C WPbarZ     coupling.
+x207x0         |-(CW*pow(SW,-1))                                                                                                % WP.C Z.c  WPbar coupling.
+x208x0         |1                                                                                                               % WPbarA.c  WP    coupling.
+x209x0         |-1                                                                                                              % WPbarWP.c A     coupling.
+x210x0         |-(CW*pow(SW,-1))                                                                                                % WPbarWP.c Z     coupling.
+x211x0         |CW*pow(SW,-1)                                                                                                   % WPbarZ.c  WP    coupling.
+x212x0         |-(CW*pow(SW,-1))                                                                                                % Z.C  WPbarWP    coupling.
+x213x0         |CW*pow(SW,-1)                                                                                                   % Z.C  WP.c WPbar coupling.
+x214x0         |-1                                                                                                              % G.C  G.c  G     coupling.
+x215x0         |-1                                                                                                              % G    G    G     coupling.
+x216x          |-pow(2,-0.5)                                                                                                    % G    G    G        coupling.
+x217x0         |-(me*pow(vv,-1))                                                                                                % Z.f  e~   e     coupling.
+x218x0         |-(mm*pow(vv,-1))                                                                                                % Z.f  m~   m     coupling.
+x219x0         |-(mtt*pow(vv,-1))                                                                                               % Z.f  tt~  tt    coupling.
+x220x0         |-(me*pow(vv,-1))                                                                                                % h    e~   e     coupling.
+x221x0         |-(mm*pow(vv,-1))                                                                                                % h    m~   m     coupling.
+x222x0         |-(mtt*pow(vv,-1))                                                                                               % h    tt~  tt    coupling.
+x223x0         |me*pow(2,-0.5)*pow(vv,-1)                                                                                       % WPbare~   ve    coupling.
+x224x0         |mm*pow(2,-0.5)*pow(vv,-1)                                                                                       % WPbarm~   vm    coupling.
+x225x0         |mtt*pow(2,-0.5)*pow(vv,-1)                                                                                      % WPbartt~  vt    coupling.
+x226x0         |-(md*pow(vv,-1))                                                                                                % Z.f  d~   d     coupling.
+x227x0         |-(Ms*pow(vv,-1))                                                                                                % Z.f  s~   s     coupling.
+x228x0         |-(Mb*pow(vv,-1))                                                                                                % Z.f  b~   b     coupling.
+x229x0         |-(md*pow(vv,-1))                                                                                                % h    d~   d     coupling.
+x230x0         |-(Ms*pow(vv,-1))                                                                                                % h    s~   s     coupling.
+x231x0         |-(Mb*pow(vv,-1))                                                                                                % h    b~   b     coupling.
+x232x0         |mu*pow(vv,-1)                                                                                                   % Z.f  u~   u     coupling.
+x233x0         |Mc*pow(vv,-1)                                                                                                   % Z.f  c~   c     coupling.
+x234x0         |Mtp*pow(vv,-1)                                                                                                   % Z.f  t~   t     coupling.
+x235x0         |-(mu*pow(vv,-1))                                                                                                % h    u~   u     coupling.
+x236x0         |-(Mc*pow(vv,-1))                                                                                                % h    c~   c     coupling.
+x237x0         |-(Mtp*pow(vv,-1))                                                                                                % h    t~   t     coupling.
+x238x0         |pow(2,-0.5)*pow(vv,-1)                                                                                          % WPbard~   u     coupling.
+x238x1         |-I1a11+I2a11                                                                                                    % WPbard~   u        coupling.
+x238x2         |I1a11+I2a11                                                                                                     % WPbard~   u        coupling.
+x239x0         |pow(2,-0.5)*pow(vv,-1)                                                                                          % WPbard~   c     coupling.
+x239x1         |-I1a12+I2a12                                                                                                    % WPbard~   c        coupling.
+x239x2         |I1a12+I2a12                                                                                                     % WPbard~   c        coupling.
+x240x0         |pow(2,-0.5)*pow(vv,-1)                                                                                          % WPbard~   t     coupling.
+x240x1         |-I1a13+I2a13                                                                                                    % WPbard~   t        coupling.
+x240x2         |I1a13+I2a13                                                                                                     % WPbard~   t        coupling.
+x241x0         |pow(2,-0.5)*pow(vv,-1)                                                                                          % WPbars~   u     coupling.
+x241x1         |-I1a21+I2a21                                                                                                    % WPbars~   u        coupling.
+x241x2         |I1a21+I2a21                                                                                                     % WPbars~   u        coupling.
+x242x0         |pow(2,-0.5)*pow(vv,-1)                                                                                          % WPbars~   c     coupling.
+x242x1         |-I1a22+I2a22                                                                                                    % WPbars~   c        coupling.
+x242x2         |I1a22+I2a22                                                                                                     % WPbars~   c        coupling.
+x243x0         |pow(2,-0.5)*pow(vv,-1)                                                                                          % WPbars~   t     coupling.
+x243x1         |-I1a23+I2a23                                                                                                    % WPbars~   t        coupling.
+x243x2         |I1a23+I2a23                                                                                                     % WPbars~   t        coupling.
+x244x0         |pow(2,-0.5)*pow(vv,-1)                                                                                          % WPbarb~   u     coupling.
+x244x1         |-I1a31+I2a31                                                                                                    % WPbarb~   u        coupling.
+x244x2         |I1a31+I2a31                                                                                                     % WPbarb~   u        coupling.
+x245x0         |pow(2,-0.5)*pow(vv,-1)                                                                                          % WPbarb~   c     coupling.
+x245x1         |-I1a32+I2a32                                                                                                    % WPbarb~   c        coupling.
+x245x2         |I1a32+I2a32                                                                                                     % WPbarb~   c        coupling.
+x246x0         |pow(2,-0.5)*pow(vv,-1)                                                                                          % WPbarb~   t     coupling.
+x246x1         |-I1a33+I2a33                                                                                                    % WPbarb~   t        coupling.
+x246x2         |I1a33+I2a33                                                                                                     % WPbarb~   t        coupling.
+x247x0         |-(pow(2,-0.5)*pow(vv,-1))                                                                                       % WP.f u~   d     coupling.
+x247x1         |-I3a11+I4a11                                                                                                    % WP.f u~   d        coupling.
+x247x2         |I3a11+I4a11                                                                                                     % WP.f u~   d        coupling.
+x248x0         |-(pow(2,-0.5)*pow(vv,-1))                                                                                       % WP.f u~   s     coupling.
+x248x1         |-I3a12+I4a12                                                                                                    % WP.f u~   s        coupling.
+x248x2         |I3a12+I4a12                                                                                                     % WP.f u~   s        coupling.
+x249x0         |-(pow(2,-0.5)*pow(vv,-1))                                                                                       % WP.f u~   b     coupling.
+x249x1         |-I3a13+I4a13                                                                                                    % WP.f u~   b        coupling.
+x249x2         |I3a13+I4a13                                                                                                     % WP.f u~   b        coupling.
+x250x0         |-(pow(2,-0.5)*pow(vv,-1))                                                                                       % WP.f c~   d     coupling.
+x250x1         |-I3a21+I4a21                                                                                                    % WP.f c~   d        coupling.
+x250x2         |I3a21+I4a21                                                                                                     % WP.f c~   d        coupling.
+x251x0         |-(pow(2,-0.5)*pow(vv,-1))                                                                                       % WP.f c~   s     coupling.
+x251x1         |-I3a22+I4a22                                                                                                    % WP.f c~   s        coupling.
+x251x2         |I3a22+I4a22                                                                                                     % WP.f c~   s        coupling.
+x252x0         |-(pow(2,-0.5)*pow(vv,-1))                                                                                       % WP.f c~   b     coupling.
+x252x1         |-I3a23+I4a23                                                                                                    % WP.f c~   b        coupling.
+x252x2         |I3a23+I4a23                                                                                                     % WP.f c~   b        coupling.
+x253x0         |-(pow(2,-0.5)*pow(vv,-1))                                                                                       % WP.f t~   d     coupling.
+x253x1         |-I3a31+I4a31                                                                                                    % WP.f t~   d        coupling.
+x253x2         |I3a31+I4a31                                                                                                     % WP.f t~   d        coupling.
+x254x0         |-(pow(2,-0.5)*pow(vv,-1))                                                                                       % WP.f t~   s     coupling.
+x254x1         |-I3a32+I4a32                                                                                                    % WP.f t~   s        coupling.
+x254x2         |I3a32+I4a32                                                                                                     % WP.f t~   s        coupling.
+x255x0         |-(pow(2,-0.5)*pow(vv,-1))                                                                                       % WP.f t~   b     coupling.
+x255x1         |-I3a33+I4a33                                                                                                    % WP.f t~   b        coupling.
+x255x2         |I3a33+I4a33                                                                                                     % WP.f t~   b        coupling.
+x256x0         |-(me*pow(2,-0.5)*pow(vv,-1))                                                                                    % WP.f ve~  e     coupling.
+x257x0         |-(mm*pow(2,-0.5)*pow(vv,-1))                                                                                    % WP.f vm~  m     coupling.
+x258x0         |-(mtt*pow(2,-0.5)*pow(vv,-1))                                                                                   % WP.f vt~  tt    coupling.
+x259x0         |-((2*L1-L4)*cos(theta)*sin(theta))                                                                              % A1   A2   H1P  H1P~  coupling.
+x260x0         |(2*L1-L4)*cos(theta)*sin(theta)                                                                                 % H1   H1P  H1P~ H2    coupling.
+x261x0         |L10*cos(theta)*sin(theta)                                                                                       % A1   A1   WPbarH1P   coupling.
+x262x0         |-(L10*cos(theta)*sin(theta))                                                                                    % A2   A2   WPbarH1P   coupling.
+x263x0         |-(L10*cos(theta)*sin(theta))                                                                                    % A1   WPbarH1   H1P   coupling.
+x264x0         |-(L10*cos(theta)*sin(theta))                                                                                    % WPbarH1   H1   H1P   coupling.
+x265x0         |L10*cos(theta)*sin(theta)                                                                                       % A1   A1   WP.f H1P~  coupling.
+x266x0         |-(L10*cos(theta)*sin(theta))                                                                                    % A2   A2   WP.f H1P~  coupling.
+x267x0         |L10*cos(theta)*sin(theta)                                                                                       % A1   WP.f H1   H1P~  coupling.
+x268x0         |-(L10*cos(theta)*sin(theta))                                                                                    % WP.f H1   H1   H1P~  coupling.
+x269x0         |-(L10*cos(theta)*sin(theta))                                                                                    % A2   WPbarH1P  H2    coupling.
+x270x0         |L10*cos(theta)*sin(theta)                                                                                       % A2   WP.f H1P~ H2    coupling.
+x271x0         |L10*cos(theta)*sin(theta)                                                                                       % WPbarH1P  H2   H2    coupling.
+x272x0         |L10*cos(theta)*sin(theta)                                                                                       % WP.f H1P~ H2   H2    coupling.
+x273x0         |L11*cos(theta)*sin(theta)                                                                                       % A1   A1   WPbarH2P   coupling.
+x274x0         |-(L11*cos(theta)*sin(theta))                                                                                    % A2   A2   WPbarH2P   coupling.
+x275x0         |L11*cos(theta)*sin(theta)                                                                                       % A1   WPbarH1   H2P   coupling.
+x276x0         |-(L11*cos(theta)*sin(theta))                                                                                    % WPbarH1   H1   H2P   coupling.
+x277x0         |L11*cos(theta)*sin(theta)                                                                                       % A2   WPbarH2   H2P   coupling.
+x278x0         |L11*cos(theta)*sin(theta)                                                                                       % WPbarH2   H2   H2P   coupling.
+x279x0         |L11*cos(theta)*sin(theta)                                                                                       % A1   A1   WP.f H2P~  coupling.
+x280x0         |-(L11*cos(theta)*sin(theta))                                                                                    % A2   A2   WP.f H2P~  coupling.
+x281x0         |-(L11*cos(theta)*sin(theta))                                                                                    % A1   WP.f H1   H2P~  coupling.
+x282x0         |-(L11*cos(theta)*sin(theta))                                                                                    % WP.f H1   H1   H2P~  coupling.
+x283x0         |-(L11*cos(theta)*sin(theta))                                                                                    % A2   WP.f H2   H2P~  coupling.
+x284x0         |L11*cos(theta)*sin(theta)                                                                                       % WP.f H2   H2   H2P~  coupling.
+x285x0         |(2*L2-L4)*cos(theta)*sin(theta)                                                                                 % A1   A2   H2P  H2P~  coupling.
+x286x0         |-((2*L2-L4)*cos(theta)*sin(theta))                                                                              % H1   H2   H2P  H2P~  coupling.
+x287x0         |-((L5-L6)*cos(theta)*sin(theta))                                                                                % A1   A2   WP.f WPbar coupling.
+x288x0         |(L5-L6)*cos(theta)*sin(theta)                                                                                   % WP.f WPbarH1   H2    coupling.
+x289x0         |L7*cos(theta)*sin(theta)                                                                                        % A1   A1   H1P~ H2P   coupling.
+x290x0         |-(L7*cos(theta)*sin(theta))                                                                                     % A2   A2   H1P~ H2P   coupling.
+x291x0         |-(L7*cos(theta)*sin(theta))                                                                                     % A1   H1   H1P~ H2P   coupling.
+x292x0         |-(L7*cos(theta)*sin(theta))                                                                                     % H1   H1   H1P~ H2P   coupling.
+x293x0         |-(L7*cos(theta)*sin(theta))                                                                                     % A2   H1P~ H2   H2P   coupling.
+x294x0         |L7*cos(theta)*sin(theta)                                                                                        % H1P~ H2   H2   H2P   coupling.
+x295x0         |L7*cos(theta)*sin(theta)                                                                                        % A1   A1   H1P  H2P~  coupling.
+x296x0         |-(L7*cos(theta)*sin(theta))                                                                                     % A2   A2   H1P  H2P~  coupling.
+x297x0         |L7*cos(theta)*sin(theta)                                                                                        % A1   H1   H1P  H2P~  coupling.
+x298x0         |-(L7*cos(theta)*sin(theta))                                                                                     % H1   H1   H1P  H2P~  coupling.
+x299x0         |L7*cos(theta)*sin(theta)                                                                                        % A2   H1P  H2   H2P~  coupling.
+x300x0         |L7*cos(theta)*sin(theta)                                                                                        % H1P  H2   H2   H2P~  coupling.
+x301x0         |3*cos(theta)*sin(theta)*(L10*cos(theta)-L11*sin(theta))                                                         % A1   A1   A1   Z.f   coupling.
+x302x0         |3*cos(theta)*sin(theta)*(L10*cos(theta)+L11*sin(theta))                                                         % A1   A1   h    H1    coupling.
+x303x0         |-3*cos(theta)*sin(theta)*(L10*cos(theta)-L11*sin(theta))                                                        % A1   Z.f  H1   H1    coupling.
+x304x0         |-3*cos(theta)*sin(theta)*(L10*cos(theta)+L11*sin(theta))                                                        % h    H1   H1   H1    coupling.
+x305x0         |-3*cos(theta)*sin(theta)*(L11*cos(theta)+L10*sin(theta))                                                        % A2   A2   A2   Z.f   coupling.
+x306x0         |-3*cos(theta)*sin(theta)*(L11*cos(theta)-L10*sin(theta))                                                        % A2   A2   h    H2    coupling.
+x307x0         |3*cos(theta)*sin(theta)*(L11*cos(theta)+L10*sin(theta))                                                         % A2   Z.f  H2   H2    coupling.
+x308x0         |3*cos(theta)*sin(theta)*(L11*cos(theta)-L10*sin(theta))                                                         % h    H2   H2   H2    coupling.
+x309x0         |3*vv*cos(theta)*sin(theta)*(L10*cos(theta)+L11*sin(theta))                                                      % A1   A1   H1    coupling.
+x310x0         |-3*vv*cos(theta)*sin(theta)*(L10*cos(theta)+L11*sin(theta))                                                     % H1   H1   H1    coupling.
+x311x0         |-3*vv*cos(theta)*sin(theta)*(L11*cos(theta)-L10*sin(theta))                                                     % A2   A2   H2    coupling.
+x312x0         |3*vv*cos(theta)*sin(theta)*(L11*cos(theta)-L10*sin(theta))                                                      % H2   H2   H2    coupling.
+x313x0         |(-3*(L1-L2+(L1+L2-L4-L7)*cos(2*theta))*sin(2*theta))/2.                                                         % A1   A1   A1   A2    coupling.
+x314x0         |-0.5*((L1-L2+(L1+L2-L4-L7)*cos(2*theta))*sin(2*theta))                                                          % A1   A2   H1   H1    coupling.
+x315x0         |((L1-L2+(L1+L2-L4-L7)*cos(2*theta))*sin(2*theta))/2.                                                            % A1   A1   H1   H2    coupling.
+x316x0         |(3*(L1-L2+(L1+L2-L4-L7)*cos(2*theta))*sin(2*theta))/2.                                                          % H1   H1   H1   H2    coupling.
+x317x0         |(3*(-L1+L2+(L1+L2-L4-L7)*cos(2*theta))*sin(2*theta))/2.                                                         % A1   A2   A2   A2    coupling.
+x318x0         |-0.5*((-L1+L2+(L1+L2-L4-L7)*cos(2*theta))*sin(2*theta))                                                         % A2   A2   H1   H2    coupling.
+x319x0         |((-L1+L2+(L1+L2-L4-L7)*cos(2*theta))*sin(2*theta))/2.                                                           % A1   A2   H2   H2    coupling.
+x320x0         |(-3*(-L1+L2+(L1+L2-L4-L7)*cos(2*theta))*sin(2*theta))/2.                                                        % H1   H2   H2   H2    coupling.
+x321x0         |2*(L1+L2-L4-L7)*pow(cos(theta),2)*pow(sin(theta),2)                                                             % A1   A2   H1   H2    coupling.
+x322x0         |pow(SW,-1)/2.                                                                                                   % A    Z.f  WPbarWP    coupling.
+x323x0         |pow(SW,-1)/2.                                                                                                   % A    WPbarh    WP    coupling.
+x324x0         |(vv*pow(SW,-1))/2.                                                                                              % A    WPbarWP    coupling.
+x325x0         |(cos(theta)*pow(SW,-1))/2.                                                                                      % A    A1   H1P~ WP    coupling.
+x326x0         |(cos(theta)*pow(SW,-1))/2.                                                                                      % A    H1   H1P~ WP    coupling.
+x327x0         |(cos(theta)*pow(SW,-1))/2.                                                                                      % A    A2   H2P~ WP    coupling.
+x328x0         |(cos(theta)*pow(SW,-1))/2.                                                                                      % A    H2   H2P~ WP    coupling.
+x329x0         |(cos(theta)*pow(SW,-1))/2.                                                                                      % A1   H1P~ WP    coupling.
+x330x0         |(cos(theta)*pow(SW,-1))/2.                                                                                      % A2   H2P~ WP    coupling.
+x331x0         |pow(SW,-1)/2.                                                                                                   % Z.f  WPbarWP    coupling.
+x332x0         |-0.5*pow(SW,-1)                                                                                                 % WPbarh    WP    coupling.
+x333x0         |(cos(theta)*pow(SW,-1))/2.                                                                                      % H1   H1P~ WP    coupling.
+x334x0         |(cos(theta)*pow(SW,-1))/2.                                                                                      % H2   H2P~ WP    coupling.
+x335x0         |1                                                                                                               % A    WP   WPbar coupling.
+x336x0         |(pow(SW,-1)*sin(theta))/2.                                                                                      % A    A2   H1P~ WP    coupling.
+x337x0         |-0.5*(pow(SW,-1)*sin(theta))                                                                                    % A    H1P~ H2   WP    coupling.
+x338x0         |-0.5*(pow(SW,-1)*sin(theta))                                                                                    % A    A1   H2P~ WP    coupling.
+x339x0         |(pow(SW,-1)*sin(theta))/2.                                                                                      % A    H1   H2P~ WP    coupling.
+x340x0         |-0.5*(pow(SW,-1)*sin(theta))                                                                                    % A1   H2P~ WP    coupling.
+x341x0         |(pow(SW,-1)*sin(theta))/2.                                                                                      % A2   H1P~ WP    coupling.
+x342x0         |(pow(SW,-1)*sin(theta))/2.                                                                                      % H1   H2P~ WP    coupling.
+x343x0         |(pow(SW,-1)*sin(theta))/2.                                                                                      % H1P~ H2   WP    coupling.
+x344x0         |-0.5*pow(SW,-1)                                                                                                 % A    Z.f  WP.f WPbar coupling.
+x345x0         |pow(SW,-1)/2.                                                                                                   % A    WP.f h    WPbar coupling.
+x346x0         |(vv*pow(SW,-1))/2.                                                                                              % A    WP.f WPbar coupling.
+x347x0         |-0.5*(cos(theta)*pow(SW,-1))                                                                                    % A    A1   H1P  WPbar coupling.
+x348x0         |(cos(theta)*pow(SW,-1))/2.                                                                                      % A    H1   H1P  WPbar coupling.
+x349x0         |-0.5*(cos(theta)*pow(SW,-1))                                                                                    % A    A2   H2P  WPbar coupling.
+x350x0         |(cos(theta)*pow(SW,-1))/2.                                                                                      % A    H2   H2P  WPbar coupling.
+x351x0         |(cos(theta)*pow(SW,-1))/2.                                                                                      % A1   H1P  WPbar coupling.
+x352x0         |(cos(theta)*pow(SW,-1))/2.                                                                                      % A2   H2P  WPbar coupling.
+x353x0         |pow(SW,-1)/2.                                                                                                   % Z.f  WP.f WPbar coupling.
+x354x0         |pow(SW,-1)/2.                                                                                                   % WP.f h    WPbar coupling.
+x355x0         |-0.5*(cos(theta)*pow(SW,-1))                                                                                    % H1   H1P  WPbar coupling.
+x356x0         |-0.5*(cos(theta)*pow(SW,-1))                                                                                    % H2   H2P  WPbar coupling.
+x357x0         |-0.5*(pow(SW,-1)*sin(theta))                                                                                    % A    A2   H1P  WPbar coupling.
+x358x0         |-0.5*(pow(SW,-1)*sin(theta))                                                                                    % A    H1P  H2   WPbar coupling.
+x359x0         |(pow(SW,-1)*sin(theta))/2.                                                                                      % A    A1   H2P  WPbar coupling.
+x360x0         |(pow(SW,-1)*sin(theta))/2.                                                                                      % A    H1   H2P  WPbar coupling.
+x361x0         |-0.5*(pow(SW,-1)*sin(theta))                                                                                    % A1   H2P  WPbar coupling.
+x362x0         |(pow(SW,-1)*sin(theta))/2.                                                                                      % A2   H1P  WPbar coupling.
+x363x0         |-0.5*(pow(SW,-1)*sin(theta))                                                                                    % H1   H2P  WPbar coupling.
+x364x0         |-0.5*(pow(SW,-1)*sin(theta))                                                                                    % H1P  H2   WPbar coupling.
+x365x0         |pow(SW,-2)/2.                                                                                                   % Z.f  Z.f  WP   WPbar coupling.
+x366x0         |pow(SW,-2)/2.                                                                                                   % WP.f WPbarWP   WPbar coupling.
+x367x0         |pow(SW,-2)/2.                                                                                                   % h    h    WP   WPbar coupling.
+x368x0         |pow(SW,-2)/2.                                                                                                   % H1P  H1P~ WP   WPbar coupling.
+x369x0         |pow(SW,-2)/2.                                                                                                   % H2P  H2P~ WP   WPbar coupling.
+x370x0         |(vv*pow(SW,-2))/2.                                                                                              % h    WP   WPbar coupling.
+x371x0         |-1                                                                                                              % A    A    WP   WPbar coupling.
+x372x0         |pow(SW,-2)/2.                                                                                                   % A1   A1   WP   WPbar coupling.
+x373x0         |pow(SW,-2)/2.                                                                                                   % A2   A2   WP   WPbar coupling.
+x374x0         |pow(SW,-2)/2.                                                                                                   % H1   H1   WP   WPbar coupling.
+x375x0         |pow(SW,-2)/2.                                                                                                   % H2   H2   WP   WPbar coupling.
+x376x0         |CW*pow(SW,-1)                                                                                                   % WP   WPbarZ     coupling.
+x377x0         |pow(SW,-2)                                                                                                      % WP   WP   WPbarWPbar coupling.
+x378x0         |-(SW*pow(CW,-1))+CW*pow(SW,-1)                                                                                  % A    WP.f WPbarZ     coupling.
+x379x0         |-(SW*pow(CW,-1))+CW*pow(SW,-1)                                                                                  % A    H1P  H1P~ Z     coupling.
+x380x0         |-(SW*pow(CW,-1))+CW*pow(SW,-1)                                                                                  % A    H2P  H2P~ Z     coupling.
+x381x0         |-0.5*(cos(2*theta)*pow(CW,-1)*pow(SW,-1)*(pow(CW,2)+pow(SW,2)))                                                 % A1   H1   Z     coupling.
+x382x0         |-0.5*(cos(2*theta)*pow(CW,-1)*pow(SW,-1)*(pow(CW,2)+pow(SW,2)))                                                 % A2   H2   Z     coupling.
+x383x0         |-0.5*(pow(CW,-1)*pow(SW,-1)*(pow(CW,2)+pow(SW,2)))                                                              % Z.f  h    Z     coupling.
+x384x0         |-0.5*(SW*pow(CW,-1))+(CW*pow(SW,-1))/2.                                                                         % WP.f WPbarZ     coupling.
+x385x0         |-0.5*(SW*pow(CW,-1))+(CW*pow(SW,-1))/2.                                                                         % H1P  H1P~ Z     coupling.
+x386x0         |-0.5*(SW*pow(CW,-1))+(CW*pow(SW,-1))/2.                                                                         % H2P  H2P~ Z     coupling.
+x387x0         |cos(theta)*pow(CW,-1)*pow(SW,-1)*(pow(CW,2)+pow(SW,2))*sin(theta)                                               % A1   H2   Z     coupling.
+x388x0         |-(cos(theta)*pow(CW,-1)*pow(SW,-1)*(pow(CW,2)+pow(SW,2))*sin(theta))                                            % A2   H1   Z     coupling.
+x389x0         |-0.5*pow(CW,-1)                                                                                                 % Z.f  WPbarWP   Z     coupling.
+x390x0         |-0.5*pow(CW,-1)                                                                                                 % WPbarh    WP   Z     coupling.
+x391x0         |-0.5*(vv*pow(CW,-1))                                                                                            % WPbarWP   Z     coupling.
+x392x0         |-0.5*(cos(theta)*pow(CW,-1))                                                                                    % A1   H1P~ WP   Z     coupling.
+x393x0         |-0.5*(cos(theta)*pow(CW,-1))                                                                                    % H1   H1P~ WP   Z     coupling.
+x394x0         |-0.5*(cos(theta)*pow(CW,-1))                                                                                    % A2   H2P~ WP   Z     coupling.
+x395x0         |-0.5*(cos(theta)*pow(CW,-1))                                                                                    % H2   H2P~ WP   Z     coupling.
+x396x0         |-0.5*(pow(CW,-1)*sin(theta))                                                                                    % A2   H1P~ WP   Z     coupling.
+x397x0         |(pow(CW,-1)*sin(theta))/2.                                                                                      % H1P~ H2   WP   Z     coupling.
+x398x0         |(pow(CW,-1)*sin(theta))/2.                                                                                      % A1   H2P~ WP   Z     coupling.
+x399x0         |-0.5*(pow(CW,-1)*sin(theta))                                                                                    % H1   H2P~ WP   Z     coupling.
+x400x0         |pow(CW,-1)/2.                                                                                                   % Z.f  WP.f WPbarZ     coupling.
+x401x0         |-0.5*pow(CW,-1)                                                                                                 % WP.f h    WPbarZ     coupling.
+x402x0         |-0.5*(vv*pow(CW,-1))                                                                                            % WP.f WPbarZ     coupling.
+x403x0         |(cos(theta)*pow(CW,-1))/2.                                                                                      % A1   H1P  WPbarZ     coupling.
+x404x0         |-0.5*(cos(theta)*pow(CW,-1))                                                                                    % H1   H1P  WPbarZ     coupling.
+x405x0         |(cos(theta)*pow(CW,-1))/2.                                                                                      % A2   H2P  WPbarZ     coupling.
+x406x0         |-0.5*(cos(theta)*pow(CW,-1))                                                                                    % H2   H2P  WPbarZ     coupling.
+x407x0         |(pow(CW,-1)*sin(theta))/2.                                                                                      % A2   H1P  WPbarZ     coupling.
+x408x0         |(pow(CW,-1)*sin(theta))/2.                                                                                      % H1P  H2   WPbarZ     coupling.
+x409x0         |-0.5*(pow(CW,-1)*sin(theta))                                                                                    % A1   H2P  WPbarZ     coupling.
+x410x0         |-0.5*(pow(CW,-1)*sin(theta))                                                                                    % H1   H2P  WPbarZ     coupling.
+x411x0         |CW*pow(SW,-1)                                                                                                   % A    WP   WPbarZ     coupling.
+x412x0         |(pow(CW,-2)*pow(SW,-2)*pow(pow(CW,2)+pow(SW,2),2))/2.                                                           % Z.f  Z.f  Z    Z     coupling.
+x413x0         |(pow(CW,-2)*pow(SW,-2)*pow(pow(CW,2)-pow(SW,2),2))/2.                                                           % WP.f WPbarZ    Z     coupling.
+x414x0         |(pow(CW,-2)*pow(SW,-2)*pow(pow(CW,2)+pow(SW,2),2))/2.                                                           % h    h    Z    Z     coupling.
+x415x0         |(pow(CW,-2)*pow(SW,-2)*pow(pow(CW,2)-pow(SW,2),2))/2.                                                           % H1P  H1P~ Z    Z     coupling.
+x416x0         |(pow(CW,-2)*pow(SW,-2)*pow(pow(CW,2)-pow(SW,2),2))/2.                                                           % H2P  H2P~ Z    Z     coupling.
+x417x0         |(vv*pow(CW,-2)*pow(SW,-2)*pow(pow(CW,2)+pow(SW,2),2))/2.                                                        % h    Z    Z     coupling.
+x418x0         |(pow(CW,-2)*pow(SW,-2)*pow(pow(CW,2)+pow(SW,2),2))/2.                                                           % A1   A1   Z    Z     coupling.
+x419x0         |(pow(CW,-2)*pow(SW,-2)*pow(pow(CW,2)+pow(SW,2),2))/2.                                                           % A2   A2   Z    Z     coupling.
+x420x0         |(pow(CW,-2)*pow(SW,-2)*pow(pow(CW,2)+pow(SW,2),2))/2.                                                           % H1   H1   Z    Z     coupling.
+x421x0         |(pow(CW,-2)*pow(SW,-2)*pow(pow(CW,2)+pow(SW,2),2))/2.                                                           % H2   H2   Z    Z     coupling.
+x422x0         |-(pow(CW,2)*pow(SW,-2))                                                                                         % WP   WPbarZ    Z     coupling.
+x423x0         |0.3333333333333333                                                                                              % A    d~   d     coupling.
+x424x0         |0.3333333333333333                                                                                              % A    s~   s     coupling.
+x425x0         |0.3333333333333333                                                                                              % A    b~   b     coupling.
+x426x0         |-0.08333333333333333*(pow(CW,-1)*pow(SW,-1))                                                                    % Z    d~   d     coupling.
+x426x1         |-3*pow(CW,2)+pow(SW,2)                                                                                          % Z    d~   d        coupling.
+x426x2         |3*(pow(CW,2)+pow(SW,2))                                                                                         % Z    d~   d        coupling.
+x427x0         |-0.08333333333333333*(pow(CW,-1)*pow(SW,-1))                                                                    % Z    s~   s     coupling.
+x427x1         |-3*pow(CW,2)+pow(SW,2)                                                                                          % Z    s~   s        coupling.
+x427x2         |3*(pow(CW,2)+pow(SW,2))                                                                                         % Z    s~   s        coupling.
+x428x0         |-0.08333333333333333*(pow(CW,-1)*pow(SW,-1))                                                                    % Z    b~   b     coupling.
+x428x1         |-3*pow(CW,2)+pow(SW,2)                                                                                          % Z    b~   b        coupling.
+x428x2         |3*(pow(CW,2)+pow(SW,2))                                                                                         % Z    b~   b        coupling.
+x429x0         |1                                                                                                               % A    e~   e     coupling.
+x430x0         |1                                                                                                               % A    m~   m     coupling.
+x431x0         |1                                                                                                               % A    tt~  tt    coupling.
+x432x0         |-0.25*(pow(CW,-1)*pow(SW,-1))                                                                                   % Z    e~   e     coupling.
+x432x1         |-pow(CW,2)+3*pow(SW,2)                                                                                          % Z    e~   e        coupling.
+x432x2         |pow(CW,2)+pow(SW,2)                                                                                             % Z    e~   e        coupling.
+x433x0         |-0.25*(pow(CW,-1)*pow(SW,-1))                                                                                   % Z    m~   m     coupling.
+x433x1         |-pow(CW,2)+3*pow(SW,2)                                                                                          % Z    m~   m        coupling.
+x433x2         |pow(CW,2)+pow(SW,2)                                                                                             % Z    m~   m        coupling.
+x434x0         |-0.25*(pow(CW,-1)*pow(SW,-1))                                                                                   % Z    tt~  tt    coupling.
+x434x1         |-pow(CW,2)+3*pow(SW,2)                                                                                          % Z    tt~  tt       coupling.
+x434x2         |pow(CW,2)+pow(SW,2)                                                                                             % Z    tt~  tt       coupling.
+x435x0         |-0.6666666666666666                                                                                             % A    u~   u     coupling.
+x436x0         |-0.6666666666666666                                                                                             % A    c~   c     coupling.
+x437x0         |-0.6666666666666666                                                                                             % A    t~   t     coupling.
+x438x0         |(pow(CW,-1)*pow(SW,-1))/12.                                                                                     % Z    u~   u     coupling.
+x438x1         |-3*pow(CW,2)+5*pow(SW,2)                                                                                        % Z    u~   u        coupling.
+x438x2         |3*(pow(CW,2)+pow(SW,2))                                                                                         % Z    u~   u        coupling.
+x439x0         |(pow(CW,-1)*pow(SW,-1))/12.                                                                                     % Z    c~   c     coupling.
+x439x1         |-3*pow(CW,2)+5*pow(SW,2)                                                                                        % Z    c~   c        coupling.
+x439x2         |3*(pow(CW,2)+pow(SW,2))                                                                                         % Z    c~   c        coupling.
+x440x0         |(pow(CW,-1)*pow(SW,-1))/12.                                                                                     % Z    t~   t     coupling.
+x440x1         |-3*pow(CW,2)+5*pow(SW,2)                                                                                        % Z    t~   t        coupling.
+x440x2         |3*(pow(CW,2)+pow(SW,2))                                                                                         % Z    t~   t        coupling.
+x441x0         |(pow(CW,-1)*pow(SW,-1)*(pow(CW,2)+pow(SW,2)))/4.                                                                % Z    ve~  ve    coupling.
+x442x0         |(pow(CW,-1)*pow(SW,-1)*(pow(CW,2)+pow(SW,2)))/4.                                                                % Z    vm~  vm    coupling.
+x443x0         |(pow(CW,-1)*pow(SW,-1)*(pow(CW,2)+pow(SW,2)))/4.                                                                % Z    vt~  vt    coupling.
+x444x0         |-1                                                                                         % G    d~   d     coupling.
+x445x0         |-1                                                                                         % G    s~   s     coupling.
+x446x0         |-1                                                                                         % G    b~   b     coupling.
+x447x0         |-1                                                                                         % G    u~   u     coupling.
+x448x0         |-1                                                                                         % G    c~   c     coupling.
+x449x0         |-1                                                                                         % G    t~   t     coupling.
+x450x0         |(pow(2,-0.5)*pow(SW,-1))/2.                                                                                     % WP   ve~  e     coupling.
+x451x0         |(pow(2,-0.5)*pow(SW,-1))/2.                                                                                     % WP   vm~  m     coupling.
+x452x0         |(pow(2,-0.5)*pow(SW,-1))/2.                                                                                     % WP   vt~  tt    coupling.
+x453x0         |(CKM1x1*pow(2,-0.5)*pow(SW,-1))/2.                                                                              % WP   u~   d     coupling.
+x454x0         |(CKM1x2*pow(2,-0.5)*pow(SW,-1))/2.                                                                              % WP   u~   s     coupling.
+x455x0         |(CKM1x3*pow(2,-0.5)*pow(SW,-1))/2.                                                                              % WP   u~   b     coupling.
+x456x0         |(CKM2x1*pow(2,-0.5)*pow(SW,-1))/2.                                                                              % WP   c~   d     coupling.
+x457x0         |(CKM2x2*pow(2,-0.5)*pow(SW,-1))/2.                                                                              % WP   c~   s     coupling.
+x458x0         |(CKM2x3*pow(2,-0.5)*pow(SW,-1))/2.                                                                              % WP   c~   b     coupling.
+x459x0         |(CKM3x1*pow(2,-0.5)*pow(SW,-1))/2.                                                                              % WP   t~   d     coupling.
+x460x0         |(CKM3x2*pow(2,-0.5)*pow(SW,-1))/2.                                                                              % WP   t~   s     coupling.
+x461x0         |(CKM3x3*pow(2,-0.5)*pow(SW,-1))/2.                                                                              % WP   t~   b     coupling.
+x462x0         |(pow(2,-0.5)*pow(SW,-1))/2.                                                                                     % WPbare~   ve    coupling.
+x463x0         |(pow(2,-0.5)*pow(SW,-1))/2.                                                                                     % WPbarm~   vm    coupling.
+x464x0         |(pow(2,-0.5)*pow(SW,-1))/2.                                                                                     % WPbartt~  vt    coupling.
+x465x0         |(CKM1x1*pow(2,-0.5)*pow(SW,-1))/2.                                                                              % WPbard~   u     coupling.
+x466x0         |(CKM2x1*pow(2,-0.5)*pow(SW,-1))/2.                                                                              % WPbard~   c     coupling.
+x467x0         |(CKM3x1*pow(2,-0.5)*pow(SW,-1))/2.                                                                              % WPbard~   t     coupling.
+x468x0         |(CKM1x2*pow(2,-0.5)*pow(SW,-1))/2.                                                                              % WPbars~   u     coupling.
+x469x0         |(CKM2x2*pow(2,-0.5)*pow(SW,-1))/2.                                                                              % WPbars~   c     coupling.
+x470x0         |(CKM3x2*pow(2,-0.5)*pow(SW,-1))/2.                                                                              % WPbars~   t     coupling.
+x471x0         |(CKM1x3*pow(2,-0.5)*pow(SW,-1))/2.                                                                              % WPbarb~   u     coupling.
+x472x0         |(CKM2x3*pow(2,-0.5)*pow(SW,-1))/2.                                                                              % WPbarb~   c     coupling.
+x473x0         |(CKM3x3*pow(2,-0.5)*pow(SW,-1))/2.                                                                              % WPbarb~   t     coupling.

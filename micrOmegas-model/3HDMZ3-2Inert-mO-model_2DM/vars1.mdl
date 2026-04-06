@@ -1,0 +1,37 @@
+Z33HDM
+ Parameters
+  Name         | Value       |> Comment                                 <|
+alphaSMZ       |0.1184       |Strong alpha(MZ) used for running.
+Q              |100          |Scale of effective running masses
+EE             |0.3134       |ee
+GG             |1.117        |Strong coupling constant (Z point)  (PDG-94)
+SW             |0.48075      |sw
+MW             |80.385       |W boson mass
+Mtp            |173.5        |Top quark pole mass
+McMc           |1.27         |Mc(Mc)  MS-BAR
+MbMb           |4.23         |Mb(Mb)  MS-BAR
+me             |0.           |me
+mm             |0.           |mm
+mtt            |1.777        |mtt
+mu             |0.01         |mu
+md             |0.01         |md
+ms             |0.2          |ms
+mh             |125.         |mh           |
+mH1P           |150.         |mH1P         |
+mH2P           |160.         |mH2P         |
+mH1            |170.         |mH1          |
+mH2            |180.         |mH2          |
+mA1            |190.         |mA1          |
+mA2            |200.         |mA2          |
+g1             |1.           |g1           |
+g2             |1.           |g2           |
+theta          |1.           |theta        |
+L1             |1.           |L1           |
+L2             |1.           |L2           |
+L4             |1.           |L4           |
+L7             |1.           |L7           |
+L10            |1.           |L10          |
+L11            |1.           |L11          |
+gw             |1.           |gw           |
+E              |2.71828182845|The base of the natural logarithm.                                        |
+PI             |3.14159265358|The circumference of a circle divided by the diameter.                    |
