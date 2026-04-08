@@ -1,6 +1,6 @@
 # Combining Evolutionary Strategies and Novelty Detection to probe Dark Matter on the $Z_3$ 3HDM
 
-Repository of the code implementing an Evolutionary Strategy enhanced with Novelty Detection used in the paper [*Machine Learning insights on the Z_3 3HDM with Dark Matter*](https://arxiv.org/abs/2603.00254). The methodology builds upon the original work presented in [*Combining Evolutionary Strategies and Novelty Detection to go Beyond the Alignment Limit of the Z_3 3HDM*](https://arxiv.org/abs/2402.07661)
+Repository of the code implementing an Evolutionary Strategy enhanced with Novelty Detection used in the paper [*Machine Learning insights on the Z<sub>3</sub> 3HDM with Dark Matter*](https://arxiv.org/abs/2603.00254). The methodology builds upon the original work presented in [*Combining Evolutionary Strategies and Novelty Detection to go Beyond the Alignment Limit of the Z<sub>3</sub> 3HDM*](https://arxiv.org/abs/2402.07661)
 
 > Note: This repository does not include the code that computes the $Z_3$ 3HDM observables, but the main Evolutionary Strategy with Novelty Detection loop presented herein can be adapted to other problems.
 
